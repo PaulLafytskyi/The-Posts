@@ -14,6 +14,8 @@
 		5615D267215AA509001EAB89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5615D266215AA509001EAB89 /* Assets.xcassets */; };
 		5615D26A215AA509001EAB89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5615D268215AA509001EAB89 /* LaunchScreen.storyboard */; };
 		5615D275215AA509001EAB89 /* The_PostsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615D274215AA509001EAB89 /* The_PostsTests.swift */; };
+		5615D286215AC493001EAB89 /* JustTestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615D285215AC493001EAB89 /* JustTestProtocol.swift */; };
+		5615D289215AC5DF001EAB89 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615D288215AC5DF001EAB89 /* GeneratedMocks.swift */; };
 		E323479EE6C22B85ECC7CF29 /* Pods_The_PostsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF91CC5699E413C3DE34599 /* Pods_The_PostsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		5615D270215AA509001EAB89 /* The-PostsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The-PostsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5615D274215AA509001EAB89 /* The_PostsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_PostsTests.swift; sourceTree = "<group>"; };
 		5615D276215AA509001EAB89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5615D285215AC493001EAB89 /* JustTestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustTestProtocol.swift; sourceTree = "<group>"; };
+		5615D288215AC5DF001EAB89 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		7BF13DAC4532EB7155735497 /* Pods-The-Posts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-Posts.release.xcconfig"; path = "Pods/Target Support Files/Pods-The-Posts/Pods-The-Posts.release.xcconfig"; sourceTree = "<group>"; };
 		A5261D04BA229C261F5C2FAC /* Pods-The-Posts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-Posts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-The-Posts/Pods-The-Posts.debug.xcconfig"; sourceTree = "<group>"; };
 		B9C35EE612F97F003523469A /* Pods-The-PostsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-PostsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-The-PostsTests/Pods-The-PostsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,12 +93,11 @@
 		5615D25E215AA507001EAB89 /* The-Posts */ = {
 			isa = PBXGroup;
 			children = (
-				5615D25F215AA507001EAB89 /* AppDelegate.swift */,
+				5615D282215AAC0C001EAB89 /* DB */,
+				5615D281215AABD4001EAB89 /* API */,
+				5615D280215AAB24001EAB89 /* Application */,
+				5615D27F215AAB18001EAB89 /* Resources */,
 				5615D261215AA507001EAB89 /* ViewController.swift */,
-				5615D263215AA507001EAB89 /* Main.storyboard */,
-				5615D266215AA509001EAB89 /* Assets.xcassets */,
-				5615D268215AA509001EAB89 /* LaunchScreen.storyboard */,
-				5615D26B215AA509001EAB89 /* Info.plist */,
 			);
 			path = "The-Posts";
 			sourceTree = "<group>";
@@ -102,10 +105,45 @@
 		5615D273215AA509001EAB89 /* The-PostsTests */ = {
 			isa = PBXGroup;
 			children = (
+				5615D288215AC5DF001EAB89 /* GeneratedMocks.swift */,
 				5615D274215AA509001EAB89 /* The_PostsTests.swift */,
 				5615D276215AA509001EAB89 /* Info.plist */,
 			);
 			path = "The-PostsTests";
+			sourceTree = "<group>";
+		};
+		5615D27F215AAB18001EAB89 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5615D266215AA509001EAB89 /* Assets.xcassets */,
+				5615D26B215AA509001EAB89 /* Info.plist */,
+				5615D268215AA509001EAB89 /* LaunchScreen.storyboard */,
+				5615D263215AA507001EAB89 /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5615D280215AAB24001EAB89 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				5615D25F215AA507001EAB89 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		5615D281215AABD4001EAB89 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5615D285215AC493001EAB89 /* JustTestProtocol.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		5615D282215AAC0C001EAB89 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DB;
 			sourceTree = "<group>";
 		};
 		5F059EE628D9E2FD5429FF7E /* Frameworks */ = {
@@ -139,6 +177,7 @@
 				5615D258215AA507001EAB89 /* Sources */,
 				5615D259215AA507001EAB89 /* Frameworks */,
 				5615D25A215AA507001EAB89 /* Resources */,
+				4954A933720FDFBE8E55AC3D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,7 +195,9 @@
 				DC0635D5F76DC0B565D61086 /* [CP] Check Pods Manifest.lock */,
 				5615D26C215AA509001EAB89 /* Sources */,
 				5615D26D215AA509001EAB89 /* Frameworks */,
+				5615D287215AC513001EAB89 /* ShellScript */,
 				5615D26E215AA509001EAB89 /* Resources */,
+				2924E40EA121C1BE05223136 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -227,6 +268,77 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2924E40EA121C1BE05223136 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-The-PostsTests/Pods-The-PostsTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Cuckoo/Cuckoo.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cuckoo.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-The-PostsTests/Pods-The-PostsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4954A933720FDFBE8E55AC3D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-The-Posts/Pods-The-Posts-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-The-Posts/Pods-The-Posts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5615D287215AC513001EAB89 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Define output file. Change \"$PROJECT_DIR/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"$PROJECT_DIR/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = $OUTPUT_FILE\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = $INPUT_DIR\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"$INPUT_DIR/API/JustTestProtocol.swift\"\n#\"$INPUT_DIR/Classes/API/ApiClient.swift\" \\\n";
+		};
 		7418ABA8EECFA5686A78F9A6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -271,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5615D262215AA507001EAB89 /* ViewController.swift in Sources */,
+				5615D286215AC493001EAB89 /* JustTestProtocol.swift in Sources */,
 				5615D260215AA507001EAB89 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5615D275215AA509001EAB89 /* The_PostsTests.swift in Sources */,
+				5615D289215AC5DF001EAB89 /* GeneratedMocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,9 +547,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A5261D04BA229C261F5C2FAC /* Pods-The-Posts.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "The-Posts/Info.plist";
+				INFOPLIST_FILE = "The-Posts/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,9 +566,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7BF13DAC4532EB7155735497 /* Pods-The-Posts.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "The-Posts/Info.plist";
+				INFOPLIST_FILE = "The-Posts/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,7 +585,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A0A9C02B9E51496563270C1 /* Pods-The-PostsTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "The-PostsTests/Info.plist";
@@ -490,7 +606,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B9C35EE612F97F003523469A /* Pods-The-PostsTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "The-PostsTests/Info.plist";
