@@ -2,6 +2,7 @@
 
 target 'The-Posts' do
   use_frameworks!
+  pod 'RealmSwift', '~> 3.10.0'
   pod 'RxSwift', '~> 4.3.1'
   pod 'RxCocoa', '~> 4.3.1'
   pod 'Alamofire', '~> 4.7.3'
