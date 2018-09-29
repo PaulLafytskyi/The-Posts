@@ -20,8 +20,15 @@ final class ApiClientImpl: ApiClient {
     self.manager = manager
   }
 
-  func sendRequest(endpoint: Endpoint) -> Observable <Response> {
-    return manager.rx.request(.get, "", parameters: nil, encoding: URLEncoding(), headers: nil)
+  func sendRequest(router: TargetType) -> Observable <Response> {
+    
+    return manager.rx.request(
+      router.method,
+      router.baseURL + router.path,
+      parameters: router.parameters,
+      encoding: router.encoding,
+      headers: router.header
+      )
     .validate()
     .responseData()
   }

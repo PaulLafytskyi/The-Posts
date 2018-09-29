@@ -12,5 +12,5 @@ import RxSwift
 typealias Response = (HTTPURLResponse, Data)
 
 protocol ApiClient {
-  func sendRequest(endpoint: Endpoint) -> Observable <Response>
+  func sendRequest(router: TargetType) -> Observable <Response>
 }

@@ -11,7 +11,7 @@ import RealmSwift
 
 @objcMembers
 
-class PostEntity: Object, Decodable {
+class PostEntity: Object, Codable {
   
   var userId: Int = 0
   var id: Int = 0
@@ -32,16 +32,9 @@ class PostEntity: Object, Decodable {
     self.title = title
     self.body = body
   }
-
-  required convenience init(from decoder: Decoder) throws {
-    let container = try decoder.container(keyedBy: PostCodingKeys.self)
-
-    self.init(
-      userId: try container.decode(Int.self, forKey: .userId),
-      id: try container.decode(Int.self, forKey: .id),
-      title: try container.decode(String.self, forKey: .title),
-      body: try container.decode(String.self, forKey: .body)
-    )
+  
+  override class func primaryKey() -> String? {
+    return "id"
   }
 
 }

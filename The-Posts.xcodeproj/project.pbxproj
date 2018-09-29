@@ -21,7 +21,7 @@
 		5615D291215ACCCF001EAB89 /* CommentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615D290215ACCCF001EAB89 /* CommentEntity.swift */; };
 		5615D295215B703E001EAB89 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615D294215B703E001EAB89 /* ApiClient.swift */; };
 		5615D297215B704B001EAB89 /* ApiClientImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615D296215B704B001EAB89 /* ApiClientImpl.swift */; };
-		5650C0B4215D267600951FA3 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650C0B3215D267600951FA3 /* Endpoint.swift */; };
+		5650C0B4215D267600951FA3 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650C0B3215D267600951FA3 /* APIRouter.swift */; };
 		5650C0BB215D419F00951FA3 /* CommentsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650C0BA215D419F00951FA3 /* CommentsRepo.swift */; };
 		5650C0BD215D41A700951FA3 /* PostRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650C0BC215D41A700951FA3 /* PostRepo.swift */; };
 		5650C0BF215D41AD00951FA3 /* UserRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650C0BE215D41AD00951FA3 /* UserRepo.swift */; };
@@ -29,6 +29,10 @@
 		5650C0C3215D41C400951FA3 /* PostRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650C0C2215D41C400951FA3 /* PostRepoImpl.swift */; };
 		5650C0C5215D41CD00951FA3 /* UserRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650C0C4215D41CD00951FA3 /* UserRepoImpl.swift */; };
 		56EFF84C215F97F8002B3146 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EFF84B215F97F8002B3146 /* DomainError.swift */; };
+		56EFF84E215FA3B3002B3146 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EFF84D215FA3B3002B3146 /* TargetType.swift */; };
+		56EFF853215FADB9002B3146 /* EntitiesDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EFF852215FADB9002B3146 /* EntitiesDatabaseManager.swift */; };
+		56EFF856215FD635002B3146 /* EntitiesDatabaseManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EFF855215FD635002B3146 /* EntitiesDatabaseManagerImpl.swift */; };
+		56EFF85A215FDE2D002B3146 /* RX+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EFF859215FDE2D002B3146 /* RX+Codable.swift */; };
 		E323479EE6C22B85ECC7CF29 /* Pods_The_PostsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF91CC5699E413C3DE34599 /* Pods_The_PostsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +67,7 @@
 		5615D290215ACCCF001EAB89 /* CommentEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentEntity.swift; sourceTree = "<group>"; };
 		5615D294215B703E001EAB89 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		5615D296215B704B001EAB89 /* ApiClientImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientImpl.swift; sourceTree = "<group>"; };
-		5650C0B3215D267600951FA3 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		5650C0B3215D267600951FA3 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		5650C0BA215D419F00951FA3 /* CommentsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsRepo.swift; sourceTree = "<group>"; };
 		5650C0BC215D41A700951FA3 /* PostRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepo.swift; sourceTree = "<group>"; };
 		5650C0BE215D41AD00951FA3 /* UserRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepo.swift; sourceTree = "<group>"; };
@@ -71,6 +75,10 @@
 		5650C0C2215D41C400951FA3 /* PostRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepoImpl.swift; sourceTree = "<group>"; };
 		5650C0C4215D41CD00951FA3 /* UserRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepoImpl.swift; sourceTree = "<group>"; };
 		56EFF84B215F97F8002B3146 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
+		56EFF84D215FA3B3002B3146 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
+		56EFF852215FADB9002B3146 /* EntitiesDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntitiesDatabaseManager.swift; sourceTree = "<group>"; };
+		56EFF855215FD635002B3146 /* EntitiesDatabaseManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntitiesDatabaseManagerImpl.swift; sourceTree = "<group>"; };
+		56EFF859215FDE2D002B3146 /* RX+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RX+Codable.swift"; sourceTree = "<group>"; };
 		7BF13DAC4532EB7155735497 /* Pods-The-Posts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-Posts.release.xcconfig"; path = "Pods/Target Support Files/Pods-The-Posts/Pods-The-Posts.release.xcconfig"; sourceTree = "<group>"; };
 		A5261D04BA229C261F5C2FAC /* Pods-The-Posts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-Posts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-The-Posts/Pods-The-Posts.debug.xcconfig"; sourceTree = "<group>"; };
 		B9C35EE612F97F003523469A /* Pods-The-PostsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-PostsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-The-PostsTests/Pods-The-PostsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -159,10 +167,11 @@
 		5615D281215AABD4001EAB89 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				5615D285215AC493001EAB89 /* JustTestProtocol.swift */,
-				5650C0B3215D267600951FA3 /* Endpoint.swift */,
 				5615D294215B703E001EAB89 /* ApiClient.swift */,
 				5615D296215B704B001EAB89 /* ApiClientImpl.swift */,
+				5650C0B3215D267600951FA3 /* APIRouter.swift */,
+				5615D285215AC493001EAB89 /* JustTestProtocol.swift */,
+				56EFF84D215FA3B3002B3146 /* TargetType.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -170,22 +179,16 @@
 		5615D282215AAC0C001EAB89 /* DB */ = {
 			isa = PBXGroup;
 			children = (
-				5615D28A215ACA68001EAB89 /* Dao */,
-				5615D28B215ACB08001EAB89 /* Entity */,
+				56EFF852215FADB9002B3146 /* EntitiesDatabaseManager.swift */,
+				56EFF855215FD635002B3146 /* EntitiesDatabaseManagerImpl.swift */,
 			);
 			path = DB;
-			sourceTree = "<group>";
-		};
-		5615D28A215ACA68001EAB89 /* Dao */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Dao;
 			sourceTree = "<group>";
 		};
 		5615D28B215ACB08001EAB89 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				56EFF858215FDE06002B3146 /* Rx+Codable */,
 				5615D28C215ACB69001EAB89 /* PostEntity.swift */,
 				5615D28E215ACC1B001EAB89 /* UserEntity.swift */,
 				5615D290215ACCCF001EAB89 /* CommentEntity.swift */,
@@ -197,9 +200,10 @@
 		5650C0B5215D402B00951FA3 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				5650C0B6215D406D00951FA3 /* Repositories */,
-				5615D282215AAC0C001EAB89 /* DB */,
 				5615D281215AABD4001EAB89 /* API */,
+				5615D282215AAC0C001EAB89 /* DB */,
+				5615D28B215ACB08001EAB89 /* Entity */,
+				5650C0B6215D406D00951FA3 /* Repositories */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -207,9 +211,7 @@
 		5650C0B6215D406D00951FA3 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				5650C0B9215D409600951FA3 /* CommentsRepo */,
-				5650C0B8215D408E00951FA3 /* PostRepo */,
-				5650C0B7215D408700951FA3 /* UserRepo */,
+				56EFF851215FAD14002B3146 /* UseCaseRepo */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -239,6 +241,24 @@
 				5650C0C0215D41B600951FA3 /* CommentsRepoImpl.swift */,
 			);
 			path = CommentsRepo;
+			sourceTree = "<group>";
+		};
+		56EFF851215FAD14002B3146 /* UseCaseRepo */ = {
+			isa = PBXGroup;
+			children = (
+				5650C0B9215D409600951FA3 /* CommentsRepo */,
+				5650C0B8215D408E00951FA3 /* PostRepo */,
+				5650C0B7215D408700951FA3 /* UserRepo */,
+			);
+			path = UseCaseRepo;
+			sourceTree = "<group>";
+		};
+		56EFF858215FDE06002B3146 /* Rx+Codable */ = {
+			isa = PBXGroup;
+			children = (
+				56EFF859215FDE2D002B3146 /* RX+Codable.swift */,
+			);
+			path = "Rx+Codable";
 			sourceTree = "<group>";
 		};
 		5F059EE628D9E2FD5429FF7E /* Frameworks */ = {
@@ -482,8 +502,9 @@
 				5650C0C5215D41CD00951FA3 /* UserRepoImpl.swift in Sources */,
 				5650C0BF215D41AD00951FA3 /* UserRepo.swift in Sources */,
 				5650C0BB215D419F00951FA3 /* CommentsRepo.swift in Sources */,
-				5650C0B4215D267600951FA3 /* Endpoint.swift in Sources */,
+				5650C0B4215D267600951FA3 /* APIRouter.swift in Sources */,
 				5650C0C3215D41C400951FA3 /* PostRepoImpl.swift in Sources */,
+				56EFF853215FADB9002B3146 /* EntitiesDatabaseManager.swift in Sources */,
 				5650C0C1215D41B600951FA3 /* CommentsRepoImpl.swift in Sources */,
 				5615D291215ACCCF001EAB89 /* CommentEntity.swift in Sources */,
 				5615D262215AA507001EAB89 /* ViewController.swift in Sources */,
@@ -493,6 +514,9 @@
 				5615D28F215ACC1B001EAB89 /* UserEntity.swift in Sources */,
 				56EFF84C215F97F8002B3146 /* DomainError.swift in Sources */,
 				5615D260215AA507001EAB89 /* AppDelegate.swift in Sources */,
+				56EFF856215FD635002B3146 /* EntitiesDatabaseManagerImpl.swift in Sources */,
+				56EFF85A215FDE2D002B3146 /* RX+Codable.swift in Sources */,
+				56EFF84E215FA3B3002B3146 /* TargetType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

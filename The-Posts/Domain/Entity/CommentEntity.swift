@@ -11,7 +11,7 @@ import RealmSwift
 
 @objcMembers
 
-class CommentEntity: Object, Decodable {
+class CommentEntity: Object, Codable {
   
   var postId: Int = 0
   var id: Int = 0
@@ -36,16 +36,8 @@ class CommentEntity: Object, Decodable {
     self.body = body
   }
 
-  required convenience init(from decoder: Decoder) throws {
-    let container = try decoder.container(keyedBy: CommentCodingKeys.self)
-
-    self.init(
-      postId: try container.decode(Int.self, forKey: .postId),
-      id: try container.decode(Int.self, forKey: .id),
-      name: try container.decode(String.self, forKey: .name),
-      email: try container.decode(String.self, forKey: .email),
-      body: try container.decode(String.self, forKey: .body)
-    )
+  override class func primaryKey() -> String? {
+    return "id"
   }
 
 }

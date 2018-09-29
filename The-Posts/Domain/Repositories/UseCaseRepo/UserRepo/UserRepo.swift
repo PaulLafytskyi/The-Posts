@@ -11,5 +11,5 @@ import RxSwift
 
 protocol UserRepo {
   func syncUser(id: String) -> Completable
-  func getUser(id: String) -> Single <UserEntity>
+  func getUser(id: String) -> Single <UserEntity?>
 }

@@ -11,7 +11,7 @@ import RealmSwift
 
 @objcMembers
 
-class UserEntity: Object, Decodable {
+class UserEntity: Object, Codable {
   var id: Int = 0
   var name: String = ""
   var userName: String = ""
@@ -32,15 +32,8 @@ class UserEntity: Object, Decodable {
     self.email = email
   }
 
-//  required convenience init(from decoder: Decoder) throws {
-//    let container = try decoder.container(keyedBy: UserCodingKeys.self)
-//    
-//    self.init(
-//      id: try container.decode(Int.self, forKey: .id),
-//      name: try container.decode(String.self, forKey: .name),
-//      userName: try container.decode(String.self, forKey: .userName),
-//      email: try container.decode(String.self, forKey: .email)
-//    )
-//  }
-
+  override class func primaryKey() -> String? {
+    return "id"
+  }
+  
 }

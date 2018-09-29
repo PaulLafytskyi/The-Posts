@@ -7,12 +7,26 @@
 //
 
 import UIKit
+import RxSwift
 
 class ViewController: UIViewController {
 
+  let disposbag = DisposeBag()
+  let postRepo = PostRepoFactory.defaultRepo()
+
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+
+    postRepo.syncPosts()
+    .andThen(self.postRepo.posts())
+      .subscribe(onSuccess: { (ent) in
+        print(ent)
+
+      }) { (error) in
+        print(error)
+    }
+
+
   }
 
 
