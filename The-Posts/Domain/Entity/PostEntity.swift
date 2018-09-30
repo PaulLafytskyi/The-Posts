@@ -13,10 +13,10 @@ import RealmSwift
 
 class PostEntity: Object, Codable {
   
-  var userId: Int = 0
-  var id: Int = 0
-  var title: String = ""
-  var body: String = ""
+  dynamic var userId: Int = 0
+  dynamic var id: Int = 0
+  dynamic var title: String = ""
+  dynamic var body: String = ""
 
   enum PostCodingKeys: String, CodingKey {
     case userId
