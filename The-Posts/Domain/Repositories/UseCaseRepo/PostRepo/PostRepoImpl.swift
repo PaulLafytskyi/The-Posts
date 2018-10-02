@@ -18,15 +18,14 @@ final class PostRepoImpl: PostRepo {
     self.entitiesDatabaseManager = entitiesDatabaseManager
   }
   
-  func syncPosts() -> Completable {
+  func syncPosts() -> Observable<Void> {
     return apiClient
       .sendRequest(router: APIRouter.posts)
       .mapArray(type: PostEntity.self)
       .flatMap { self.entitiesDatabaseManager.saveEntities(entities: $0) }
-      .asCompletable()
   }
 
-  func posts() -> Single<[PostEntity]> {
+  func posts() -> Observable<[PostEntity]> {
     return self.entitiesDatabaseManager.fetchAllEntities(filter: nil)
   }
 }

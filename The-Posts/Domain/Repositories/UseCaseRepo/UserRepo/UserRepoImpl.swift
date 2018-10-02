@@ -19,15 +19,14 @@ final class UserRepoImpl: UserRepo {
     self.entitiesDatabaseManager = entitiesDatabaseManager
   }
 
-  func syncUser(id: String) -> Completable {
+  func syncUser(id: String) -> Observable<Void> {
     return apiClient
       .sendRequest(router: APIRouter.user(id: id))
       .mapObject(type: UserEntity.self)
-      .flatMap { self.entitiesDatabaseManager.saveEntities(entities: [$0]) }
-      .asCompletable()
+      .flatMap { self.entitiesDatabaseManager.saveEntitie(entitie: $0) }
   }
 
-  func getUser(id: String) -> Single<UserEntity?> {
+  func getUser(id: String) -> Observable <UserEntity> {
     let user =  self.entitiesDatabaseManager.fetchFirstEntity(filter: "id == \(id)")
     return user
   }

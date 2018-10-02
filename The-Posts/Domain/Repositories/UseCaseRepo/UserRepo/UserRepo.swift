@@ -10,6 +10,6 @@ import Foundation
 import RxSwift
 
 protocol UserRepo {
-  func syncUser(id: String) -> Completable
-  func getUser(id: String) -> Single <UserEntity?>
+  func syncUser(id: String) -> Observable<Void>
+  func getUser(id: String) -> Observable <UserEntity>
 }

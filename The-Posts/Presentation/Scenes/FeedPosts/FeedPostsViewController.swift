@@ -30,14 +30,9 @@ class FeedPostsViewController: UIViewController {
 
   func setupBinding() {
 
-    let viewWillAppear = rx.sentMessage(#selector(UIViewController.viewWillAppear(_:)))
-      .take(1)
-      .mapToVoid()
-      .asDriverOnErrorJustComplete()
-
     let refreshTrigger = refreshControl.rx.controlEvent(.valueChanged).asDriver()
 
-    let input = FeedPostsViewModel.Input(loadTrigger: Driver.merge(viewWillAppear,refreshTrigger), selectionTrigger: tableView.rx.itemSelected.asDriver())
+    let input = FeedPostsViewModel.Input(loadTrigger: refreshTrigger, selectionTrigger: tableView.rx.itemSelected.asDriver())
 
     let output = viewModel.transform(input: input)
 

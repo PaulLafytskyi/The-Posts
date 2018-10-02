@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 protocol CommentsRepo {
-  func syncComments(postId: String) -> Completable
-  func getComments(postId: String) -> Single<[CommentEntity]>
+  func syncComments(postId: String) -> Observable<Void>
+  func getComments(postId: String) -> Observable<[CommentEntity]>
 }
 

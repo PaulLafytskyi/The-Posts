@@ -19,15 +19,14 @@ final class CommentsRepoImpl: CommentsRepo {
     self.entitiesDatabaseManager = entitiesDatabaseManager
   }
 
-  func syncComments(postId: String) -> Completable {
+  func syncComments(postId: String) -> Observable<Void> {
     return apiClient
       .sendRequest(router: APIRouter.comments(postId: postId))
       .mapArray(type: CommentEntity.self)
       .flatMap { self.entitiesDatabaseManager.saveEntities(entities: $0) }
-      .asCompletable()
   }
 
-  func getComments(postId: String) -> Single<[CommentEntity]> {
+  func getComments(postId: String) -> Observable<[CommentEntity]> {
     return entitiesDatabaseManager.fetchAllEntities(filter: "postId == \(postId)")
   }
 

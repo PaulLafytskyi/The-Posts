@@ -19,41 +19,77 @@ class EntitiesDatabaseManagerImpl <T: Object> : EntitiesDatabaseManager<T>  {
     self.realm = realm
   }
 
-  override func saveEntities(entities: [T]) -> Completable {
-    return Completable.create {[weak self] (completable) -> Disposable in
+  override func saveEntities(entities: [T]) -> Observable<Void> {
+    return Observable.create { observer in
       do {
-        try self?.realm.write {
-          self?.realm.add(entities, update: true)
-          completable(.completed)
+        try self.realm.write {
+          self.realm.add(entities, update: true)
+          observer.onNext(())
+          observer.onCompleted()
         }
       }
-
       catch let error {
-        completable(.error(error))
+        observer.onError(error)
       }
 
       return Disposables.create()
     }
   }
 
-  override func fetchAllEntities(filter: FilterWhere?) -> Single<[T]> {
-    guard let filter = filter else {
-      return Single.just(Array(realm.objects(T.self)))
-//      return Single.create(subscribe: { (single) -> Disposable in
-//        single(.success(Array(self.realm.objects(T.self))))
-//        return Disposables.create()
-//      })
-    }
+  override func saveEntitie(entitie: T) -> Observable<Void> {
+    return Observable.create { observer in
+      do {
+        try self.realm.write {
+          print(entitie)
+          self.realm.add(entitie, update: true)
+          observer.onNext(())
+          observer.onCompleted()
+        }
+      }
 
-    return Single.just(Array(realm.objects(T.self).filter(filter)))
+      catch let error {
+        observer.onError(error)
+      }
+      return Disposables.create()
+    }
   }
 
-  override func fetchFirstEntity(filter: FilterWhere?) -> Single<T?> {
-    guard let filter = filter else {
-      return Single.just(realm.objects(T.self).first)
+  override func fetchAllEntities(filter: FilterWhere?) -> Observable<[T]> {
+    return Observable.create { observer in
+      guard let filter = filter else {
+        observer.onNext(Array(self.realm.objects(T.self)))
+        observer.onCompleted()
+        return Disposables.create()
+      }
+      observer.onNext(Array(self.realm.objects(T.self).filter(filter)))
+      observer.onCompleted()
+      return Disposables.create()
     }
+  }
 
-    return Single.just(realm.objects(T.self).filter(filter).first)
+  override func fetchFirstEntity(filter: FilterWhere?) -> Observable<T> {
+    return Observable.create { observer in
+
+      guard let filter = filter else {
+        guard let object = self.realm.objects(T.self).first else {
+          observer.onError(DomainError.entitieNotFound)
+          return Disposables.create()
+        }
+
+        observer.onNext(object)
+        observer.onCompleted()
+        return Disposables.create()
+      }
+
+      guard let filtredObject = self.realm.objects(T.self).filter(filter).first else {
+        observer.onError(DomainError.entitieNotFound)
+        return Disposables.create()
+      }
+
+      observer.onNext(filtredObject)
+      observer.onCompleted()
+      return Disposables.create()
+    }
   }
 }
 

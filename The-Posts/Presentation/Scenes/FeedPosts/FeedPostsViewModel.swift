@@ -35,37 +35,22 @@ final class FeedPostsViewModel {
 
     let activityIndicator = ActivityIndicator()
 
-    let newpost = input.loadTrigger.asObservable()
-      .flatMapLatest {_ in
-        return self.postRepo.syncPosts()
-          .catchError{ error in
-            print(error)
-            return Completable.empty()}
-          .andThen(self.postRepo.posts())
-    }
+    let triger = input.loadTrigger
+      .startWith(())
       .asObservable()
+
+    let posts = triger.flatMapLatest { _ in
+      return self.postRepo.syncPosts()
+      }
+      .flatMap {_ in
+        return self.postRepo.posts()
+      }
       .trackActivity(activityIndicator)
       .asDriverOnErrorJustComplete()
 
 
-
-//    let trigger = input.loadTrigger.asDriver()
-
-//
-//    let posts = trigger.asObservable()
-//      .flatMapLatest {_ in
-//        return self.postRepo.syncPosts()
-//          .catchError{_ in
-//            return Completable.empty()
-//          }
-//          .andThen(self.postRepo.posts())
-//      }
-//      .trackActivity(activityIndicator)
-//      .asDriver(onErrorJustReturn: [PostEntity]())
-
-
     let navigationToPost = input.selectionTrigger
-      .withLatestFrom(newpost) { indexPath, items -> PostEntity in
+      .withLatestFrom(posts) { indexPath, items -> PostEntity in
         return items[indexPath.row]
       }
       .do(onNext: { post in
@@ -73,7 +58,7 @@ final class FeedPostsViewModel {
       })
 
     return Output(
-      posts: newpost,
+      posts: posts,
       fetching: activityIndicator.asDriver(),
       navigate:navigationToPost
     )

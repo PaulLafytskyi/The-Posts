@@ -10,6 +10,6 @@ import Foundation
 import RxSwift
 
 protocol PostRepo {
-  func syncPosts() -> Completable
-  func posts() -> Single <[PostEntity]>
+  func syncPosts() -> Observable<Void>
+  func posts() -> Observable <[PostEntity]>
 }

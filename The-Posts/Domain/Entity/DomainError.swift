@@ -12,4 +12,5 @@ enum DomainError: Error {
   case notFound
   case parsingError
   case networkError
+  case entitieNotFound
 }

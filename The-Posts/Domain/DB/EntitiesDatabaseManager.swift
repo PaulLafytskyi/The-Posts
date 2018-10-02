@@ -18,15 +18,19 @@ typealias FilterWhere = String
 
 class EntitiesDatabaseManager <T>  {
 
-  func saveEntities(entities: [T]) -> Completable {
+  func saveEntities(entities: [T]) -> Observable<Void> {
     exeption()
   }
 
-  func fetchAllEntities(filter: FilterWhere?) -> Single<[T]> {
+  func saveEntitie(entitie: T) -> Observable<Void> {
     exeption()
   }
 
-  func fetchFirstEntity(filter: FilterWhere?) -> Single<T?> {
+  func fetchAllEntities(filter: FilterWhere?) -> Observable<[T]> {
+    exeption()
+  }
+
+  func fetchFirstEntity(filter: FilterWhere?) -> Observable<T> {
     exeption()
   }
 
