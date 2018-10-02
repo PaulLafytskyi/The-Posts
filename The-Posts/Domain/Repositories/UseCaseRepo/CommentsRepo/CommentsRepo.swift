@@ -13,4 +13,3 @@ protocol CommentsRepo {
   func syncComments(postId: String) -> Observable<Void>
   func getComments(postId: String) -> Observable<[CommentEntity]>
 }
-

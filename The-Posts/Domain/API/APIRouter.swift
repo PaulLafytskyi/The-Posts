@@ -62,5 +62,4 @@ extension APIRouter: TargetType {
       return nil
     }
   }
-
 }

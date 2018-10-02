@@ -33,7 +33,6 @@ class EntitiesDatabaseManager <T>  {
   func fetchFirstEntity(filter: FilterWhere?) -> Observable<T> {
     exeption()
   }
-
 }
 
 func exeption() -> Never {

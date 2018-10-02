@@ -39,4 +39,3 @@ class UserRepoFactory {
       entitiesDatabaseManager: EntitiesDatabaseManagerFactory.defaultManager())
   }
 }
-

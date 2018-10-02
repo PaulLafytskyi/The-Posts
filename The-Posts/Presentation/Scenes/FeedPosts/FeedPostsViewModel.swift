@@ -41,13 +41,14 @@ final class FeedPostsViewModel {
 
     let posts = triger.flatMapLatest { _ in
       return self.postRepo.syncPosts()
+      .catchError{ error in return Observable.just(()) }
+      .trackActivity(activityIndicator)
       }
       .flatMap {_ in
         return self.postRepo.posts()
       }
-      .trackActivity(activityIndicator)
+      .observeOn(MainScheduler.instance)
       .asDriverOnErrorJustComplete()
-
 
     let navigationToPost = input.selectionTrigger
       .withLatestFrom(posts) { indexPath, items -> PostEntity in
@@ -62,32 +63,5 @@ final class FeedPostsViewModel {
       fetching: activityIndicator.asDriver(),
       navigate:navigationToPost
     )
-  }
-}
-
-
-
-extension ObservableType {
-
-  func catchErrorJustComplete() -> Observable<E> {
-    return catchError { _ in
-      return Observable.empty()
-    }
-  }
-
-  func asDriverOnErrorJustComplete() -> Driver<E> {
-    return asDriver { _ in
-      return Driver.empty()
-    }
-  }
-
-  func mapToVoid() -> Observable<Void> {
-    return map { _ in }
-  }
-
-  func toEmpty<T>(_ type: T.Type) -> Observable<T> {
-    return flatMap { _ in
-      return Observable<T>.empty()
-    }
   }
 }

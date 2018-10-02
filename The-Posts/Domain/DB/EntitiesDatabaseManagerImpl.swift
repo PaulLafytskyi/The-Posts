@@ -40,7 +40,6 @@ class EntitiesDatabaseManagerImpl <T: Object> : EntitiesDatabaseManager<T>  {
     return Observable.create { observer in
       do {
         try self.realm.write {
-          print(entitie)
           self.realm.add(entitie, update: true)
           observer.onNext(())
           observer.onCompleted()

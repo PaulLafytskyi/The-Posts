@@ -17,6 +17,7 @@ class ApplicationNavigatorLocator {
 
   var shared: ApplicationNavigator {
     guard let  applicationNavigator = ApplicationNavigatorLocator.applicationNavigator else {
+      //Populate first
       fatalError()
     }
     return applicationNavigator

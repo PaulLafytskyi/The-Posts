@@ -16,7 +16,7 @@ class PostDetailViewController: UIViewController {
   var viewModel: PostDetailViewModel!
   private let disposeBag = DisposeBag()
 
-  let dataSource = RxTableViewSectionedReloadDataSource<SectionItems>(
+  let dataSource = RxTableViewSectionedReloadDataSource<SectionItems> (
     configureCell: { (dataSource, table, indexPath, item) in
       switch item {
       case .author(let author):
@@ -32,14 +32,11 @@ class PostDetailViewController: UIViewController {
         cell.commentsLabel.text = String(comments)
         return cell
       }
-    },
-    titleForHeaderInSection: { _, _ in
-      return "lala"
-
     }
   )
 
   override func viewDidLoad() {
+    super.viewDidLoad()
     configureTableView()
     setupBinding()
   }
@@ -50,19 +47,17 @@ class PostDetailViewController: UIViewController {
   }
 
   func setupBinding() {
-
     let viewWillAppear = rx.sentMessage(#selector(UIViewController.viewWillAppear(_:)))
       .take(1)
       .mapToVoid()
       .asDriverOnErrorJustComplete()
 
     let input = PostDetailViewModel.Input(loadTrigger: viewWillAppear)
-
-
     let output = viewModel.transform(input: input)
 
-    output.sectionItems.drive(tableView.rx.items(dataSource: dataSource))
-    .disposed(by: disposeBag)
+    output
+      .sectionItems
+      .drive(tableView.rx.items(dataSource: dataSource))
+      .disposed(by: disposeBag)
   }
-
 }

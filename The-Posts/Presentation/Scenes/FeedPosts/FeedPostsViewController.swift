@@ -30,27 +30,32 @@ class FeedPostsViewController: UIViewController {
 
   func setupBinding() {
 
-    let refreshTrigger = refreshControl.rx.controlEvent(.valueChanged).asDriver()
+    let refreshTrigger = refreshControl
+      .rx
+      .controlEvent(.valueChanged)
+      .asDriver()
 
     let input = FeedPostsViewModel.Input(loadTrigger: refreshTrigger, selectionTrigger: tableView.rx.itemSelected.asDriver())
-
     let output = viewModel.transform(input: input)
 
-    output.posts
+    output
+      .posts
       .drive(tableView.rx.items(cellIdentifier: "FeedPostTableViewCell",
-                                cellType: FeedPostTableViewCell.self)) { _, post, cell in
-                                  cell.titleLabel.text = post.title
-                                  cell.bodyLabel.text = post.body
+                                cellType: FeedPostTableViewCell.self))
+      { _, post, cell in
+        cell.titleLabel.text = post.title
+        cell.bodyLabel.text = post.body
       }
       .disposed(by: disposeBag)
 
-    output.fetching
+    output
+      .fetching
       .drive(refreshControl.rx.isRefreshing)
       .disposed(by: disposeBag)
 
-    output.navigate
+    output
+      .navigate
       .drive()
       .disposed(by: disposeBag)
   }
-
 }

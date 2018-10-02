@@ -16,7 +16,6 @@ class DatabaseMigrationManagerImpl: DatabaseMigrationManager {
   }
 }
 
-
 class DatabaseMigrationManagerFactory {
   func defaultManager() -> DatabaseMigrationManager {
     return DatabaseMigrationManagerImpl()

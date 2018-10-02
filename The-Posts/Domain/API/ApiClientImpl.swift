@@ -21,7 +21,6 @@ final class ApiClientImpl: ApiClient {
   }
 
   func sendRequest(router: TargetType) -> Observable <Response> {
-    
     return manager.rx.request(
       router.method,
       router.baseURL + router.path,
@@ -42,5 +41,4 @@ final class ApiClientFactory {
       manager: SessionManager.default
     )
   }
-
 }

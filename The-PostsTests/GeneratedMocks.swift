@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: The-Posts/Application/ApplicationAssembly.swift at 2018-09-30 21:25:40 +0000
+// MARK: - Mocks generated from file: The-Posts/Application/ApplicationAssembly.swift at 2018-10-02 18:18:35 +0000
 
 //
 //  ApplicationAssembly.swift
@@ -141,7 +141,7 @@ class MockApplicationAssembly: ApplicationAssembly, Cuckoo.ProtocolMock {
 }
 
 
-// MARK: - Mocks generated from file: The-Posts/Domain/API/ApiClient.swift at 2018-09-30 21:25:40 +0000
+// MARK: - Mocks generated from file: The-Posts/Domain/API/ApiClient.swift at 2018-10-02 18:18:35 +0000
 
 //
 //  ApiClient.swift

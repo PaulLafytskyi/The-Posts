@@ -29,7 +29,6 @@ final class CommentsRepoImpl: CommentsRepo {
   func getComments(postId: String) -> Observable<[CommentEntity]> {
     return entitiesDatabaseManager.fetchAllEntities(filter: "postId == \(postId)")
   }
-
 }
 
 class CommentsRepoFactory {
@@ -39,5 +38,4 @@ class CommentsRepoFactory {
       entitiesDatabaseManager: EntitiesDatabaseManagerFactory.defaultManager())
   }
 }
-
 
