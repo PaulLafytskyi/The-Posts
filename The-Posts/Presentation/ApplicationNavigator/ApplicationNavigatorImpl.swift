@@ -35,6 +35,12 @@ final class ApplicationNavigatorImpl: ApplicationNavigator {
   }
 
   private func navigateToPost(post: PostEntity) {
-
+    let vm = PostDetailViewModel(
+      post: post, userRepo: UserRepoFactory.defaultRepo(),
+      commentsRepo: CommentsRepoFactory.defaultRepo()
+    )
+    let detailViewController = storyboard.instantiateVC(type: PostDetailViewController.self)
+    detailViewController.viewModel = vm
+    navigationController.pushViewController(detailViewController, animated: true)
   }
 }

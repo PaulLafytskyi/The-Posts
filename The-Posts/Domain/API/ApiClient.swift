@@ -14,3 +14,4 @@ typealias Response = (HTTPURLResponse, Data)
 protocol ApiClient {
   func sendRequest(router: TargetType) -> Observable <Response>
 }
+

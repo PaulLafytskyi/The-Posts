@@ -22,13 +22,14 @@ final class UserRepoImpl: UserRepo {
   func syncUser(id: String) -> Completable {
     return apiClient
       .sendRequest(router: APIRouter.user(id: id))
-      .mapArray(type: UserEntity.self)
-      .flatMap { self.entitiesDatabaseManager.saveEntities(entities: $0) }
+      .mapObject(type: UserEntity.self)
+      .flatMap { self.entitiesDatabaseManager.saveEntities(entities: [$0]) }
       .asCompletable()
   }
 
   func getUser(id: String) -> Single<UserEntity?> {
-    return self.entitiesDatabaseManager.fetchFirstEntity(filter: "id == \(id)")
+    let user =  self.entitiesDatabaseManager.fetchFirstEntity(filter: "id == \(id)")
+    return user
   }
 }
 

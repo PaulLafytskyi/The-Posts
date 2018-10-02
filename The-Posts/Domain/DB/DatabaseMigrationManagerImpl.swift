@@ -11,7 +11,7 @@ import RealmSwift
 
 class DatabaseMigrationManagerImpl: DatabaseMigrationManager {
   func migrateIfNeeded() {
-    let config = Realm.Configuration(schemaVersion: 1)
+    let config = Realm.Configuration(schemaVersion: 2)
     Realm.Configuration.defaultConfiguration = config
   }
 }

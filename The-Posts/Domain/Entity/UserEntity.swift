@@ -12,10 +12,10 @@ import RealmSwift
 @objcMembers
 
 class UserEntity: Object, Codable {
-  var id: Int = 0
-  var name: String = ""
-  var userName: String = ""
-  var email: String = ""
+  dynamic var id: Int = 0
+  dynamic var name: String = ""
+  dynamic var username: String = ""
+  dynamic var email: String = ""
 
   enum UserCodingKeys: String, CodingKey {
     case id
@@ -24,11 +24,11 @@ class UserEntity: Object, Codable {
     case email
   }
 
-  convenience init(id: Int, name: String, userName: String, email: String) {
+  convenience init(id: Int, name: String, username: String, email: String) {
     self.init()
     self.id = id
     self.name = name
-    self.userName = userName
+    self.username = username
     self.email = email
   }
 

@@ -13,3 +13,4 @@ protocol CommentsRepo {
   func syncComments(postId: String) -> Completable
   func getComments(postId: String) -> Single<[CommentEntity]>
 }
+

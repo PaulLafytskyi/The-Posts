@@ -29,7 +29,7 @@ extension APIRouter: TargetType {
     case .post(let id):
       return "/posts/\(id)"
     case .user(let id):
-      return "/user/\(id)"
+      return "/users/\(id)"
     case .comments(let postId):
       return "/posts/\(postId)/comments"
     }

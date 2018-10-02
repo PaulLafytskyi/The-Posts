@@ -15,12 +15,14 @@
 		5615D26A215AA509001EAB89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5615D268215AA509001EAB89 /* LaunchScreen.storyboard */; };
 		5615D275215AA509001EAB89 /* The_PostsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615D274215AA509001EAB89 /* The_PostsTests.swift */; };
 		5615D286215AC493001EAB89 /* JustTestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615D285215AC493001EAB89 /* JustTestProtocol.swift */; };
-		5615D289215AC5DF001EAB89 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615D288215AC5DF001EAB89 /* GeneratedMocks.swift */; };
 		5615D28D215ACB69001EAB89 /* PostEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615D28C215ACB69001EAB89 /* PostEntity.swift */; };
 		5615D28F215ACC1B001EAB89 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615D28E215ACC1B001EAB89 /* UserEntity.swift */; };
 		5615D291215ACCCF001EAB89 /* CommentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615D290215ACCCF001EAB89 /* CommentEntity.swift */; };
 		5615D295215B703E001EAB89 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615D294215B703E001EAB89 /* ApiClient.swift */; };
 		5615D297215B704B001EAB89 /* ApiClientImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615D296215B704B001EAB89 /* ApiClientImpl.swift */; };
+		563819C021616420007F7279 /* PostRepoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563819BF21616420007F7279 /* PostRepoTests.swift */; };
+		563819C12161662C007F7279 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F0A2A22161631300400679 /* GeneratedMocks.swift */; };
+		563819C621616ADA007F7279 /* MockedPostsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 563819C521616ADA007F7279 /* MockedPostsResponse.json */; };
 		5650C0B4215D267600951FA3 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650C0B3215D267600951FA3 /* APIRouter.swift */; };
 		5650C0BB215D419F00951FA3 /* CommentsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650C0BA215D419F00951FA3 /* CommentsRepo.swift */; };
 		5650C0BD215D41A700951FA3 /* PostRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650C0BC215D41A700951FA3 /* PostRepo.swift */; };
@@ -35,6 +37,11 @@
 		5656BB6021610CB200B535A7 /* FeedPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5656BB5F21610CB200B535A7 /* FeedPostsViewController.swift */; };
 		5656BB6221610CBD00B535A7 /* FeedPostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5656BB6121610CBD00B535A7 /* FeedPostsViewModel.swift */; };
 		5656BB6521610CFA00B535A7 /* FeedPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5656BB6421610CFA00B535A7 /* FeedPostTableViewCell.swift */; };
+		5691D45321620C46002750CD /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5691D45221620C46002750CD /* PostDetailViewController.swift */; };
+		5691D45521620C51002750CD /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5691D45421620C51002750CD /* PostDetailViewModel.swift */; };
+		5691D45821620CBD002750CD /* AuthorPostDetailTalbeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5691D45721620CBD002750CD /* AuthorPostDetailTalbeViewCell.swift */; };
+		5691D45A21620CDA002750CD /* PostDetailDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5691D45921620CDA002750CD /* PostDetailDescriptionTableViewCell.swift */; };
+		5691D45C21620CE8002750CD /* PostDetailCommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5691D45B21620CE8002750CD /* PostDetailCommentsTableViewCell.swift */; };
 		569A41FA21611B460014E43C /* ApplicationNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A41F921611B460014E43C /* ApplicationNavigator.swift */; };
 		569A41FC21611B4E0014E43C /* ApplicationNavigatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A41FB21611B4E0014E43C /* ApplicationNavigatorImpl.swift */; };
 		569A41FF21611D2D0014E43C /* UIStoryboard+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A41FE21611D2D0014E43C /* UIStoryboard+Common.swift */; };
@@ -73,12 +80,13 @@
 		5615D274215AA509001EAB89 /* The_PostsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_PostsTests.swift; sourceTree = "<group>"; };
 		5615D276215AA509001EAB89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5615D285215AC493001EAB89 /* JustTestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustTestProtocol.swift; sourceTree = "<group>"; };
-		5615D288215AC5DF001EAB89 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		5615D28C215ACB69001EAB89 /* PostEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEntity.swift; sourceTree = "<group>"; };
 		5615D28E215ACC1B001EAB89 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		5615D290215ACCCF001EAB89 /* CommentEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentEntity.swift; sourceTree = "<group>"; };
 		5615D294215B703E001EAB89 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		5615D296215B704B001EAB89 /* ApiClientImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientImpl.swift; sourceTree = "<group>"; };
+		563819BF21616420007F7279 /* PostRepoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepoTests.swift; sourceTree = "<group>"; };
+		563819C521616ADA007F7279 /* MockedPostsResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockedPostsResponse.json; sourceTree = "<group>"; };
 		5650C0B3215D267600951FA3 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		5650C0BA215D419F00951FA3 /* CommentsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsRepo.swift; sourceTree = "<group>"; };
 		5650C0BC215D41A700951FA3 /* PostRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepo.swift; sourceTree = "<group>"; };
@@ -93,6 +101,11 @@
 		5656BB5F21610CB200B535A7 /* FeedPostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPostsViewController.swift; sourceTree = "<group>"; };
 		5656BB6121610CBD00B535A7 /* FeedPostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPostsViewModel.swift; sourceTree = "<group>"; };
 		5656BB6421610CFA00B535A7 /* FeedPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPostTableViewCell.swift; sourceTree = "<group>"; };
+		5691D45221620C46002750CD /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
+		5691D45421620C51002750CD /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
+		5691D45721620CBD002750CD /* AuthorPostDetailTalbeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorPostDetailTalbeViewCell.swift; sourceTree = "<group>"; };
+		5691D45921620CDA002750CD /* PostDetailDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailDescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		5691D45B21620CE8002750CD /* PostDetailCommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailCommentsTableViewCell.swift; sourceTree = "<group>"; };
 		569A41F921611B460014E43C /* ApplicationNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationNavigator.swift; sourceTree = "<group>"; };
 		569A41FB21611B4E0014E43C /* ApplicationNavigatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationNavigatorImpl.swift; sourceTree = "<group>"; };
 		569A41FE21611D2D0014E43C /* UIStoryboard+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Common.swift"; sourceTree = "<group>"; };
@@ -103,6 +116,7 @@
 		56EFF852215FADB9002B3146 /* EntitiesDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntitiesDatabaseManager.swift; sourceTree = "<group>"; };
 		56EFF855215FD635002B3146 /* EntitiesDatabaseManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntitiesDatabaseManagerImpl.swift; sourceTree = "<group>"; };
 		56EFF859215FDE2D002B3146 /* RX+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RX+Codable.swift"; sourceTree = "<group>"; };
+		56F0A2A22161631300400679 /* GeneratedMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		7BF13DAC4532EB7155735497 /* Pods-The-Posts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-Posts.release.xcconfig"; path = "Pods/Target Support Files/Pods-The-Posts/Pods-The-Posts.release.xcconfig"; sourceTree = "<group>"; };
 		A5261D04BA229C261F5C2FAC /* Pods-The-Posts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-Posts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-The-Posts/Pods-The-Posts.debug.xcconfig"; sourceTree = "<group>"; };
 		B9C35EE612F97F003523469A /* Pods-The-PostsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-PostsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-The-PostsTests/Pods-The-PostsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -164,8 +178,9 @@
 		5615D273215AA509001EAB89 /* The-PostsTests */ = {
 			isa = PBXGroup;
 			children = (
-				5615D288215AC5DF001EAB89 /* GeneratedMocks.swift */,
+				563819BC21616386007F7279 /* Domain */,
 				5615D274215AA509001EAB89 /* The_PostsTests.swift */,
+				56F0A2A22161631300400679 /* GeneratedMocks.swift */,
 				5615D276215AA509001EAB89 /* Info.plist */,
 			);
 			path = "The-PostsTests";
@@ -174,6 +189,7 @@
 		5615D27F215AAB18001EAB89 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				563819C221616A81007F7279 /* MockedData */,
 				5615D266215AA509001EAB89 /* Assets.xcassets */,
 				5615D26B215AA509001EAB89 /* Info.plist */,
 				5615D268215AA509001EAB89 /* LaunchScreen.storyboard */,
@@ -225,6 +241,38 @@
 				56EFF84B215F97F8002B3146 /* DomainError.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		563819BC21616386007F7279 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				563819BE216163FE007F7279 /* Repositories */,
+				563819BD216163A2007F7279 /* API */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		563819BD216163A2007F7279 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		563819BE216163FE007F7279 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				563819BF21616420007F7279 /* PostRepoTests.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		563819C221616A81007F7279 /* MockedData */ = {
+			isa = PBXGroup;
+			children = (
+				563819C521616ADA007F7279 /* MockedPostsResponse.json */,
+			);
+			path = MockedData;
 			sourceTree = "<group>";
 		};
 		5650C0B5215D402B00951FA3 /* Domain */ = {
@@ -304,8 +352,29 @@
 		5656BB5E21610C9B00B535A7 /* PostsDetail */ = {
 			isa = PBXGroup;
 			children = (
+				5691D45221620C46002750CD /* PostDetailViewController.swift */,
+				5691D45421620C51002750CD /* PostDetailViewModel.swift */,
+				5691D45621620C58002750CD /* PostDetalCells */,
 			);
 			path = PostsDetail;
+			sourceTree = "<group>";
+		};
+		56766AAB21625750005CE700 /* 3dParty */ = {
+			isa = PBXGroup;
+			children = (
+				569A420221614CDF0014E43C /* ActivityIndicator.swift */,
+			);
+			path = 3dParty;
+			sourceTree = "<group>";
+		};
+		5691D45621620C58002750CD /* PostDetalCells */ = {
+			isa = PBXGroup;
+			children = (
+				5691D45721620CBD002750CD /* AuthorPostDetailTalbeViewCell.swift */,
+				5691D45921620CDA002750CD /* PostDetailDescriptionTableViewCell.swift */,
+				5691D45B21620CE8002750CD /* PostDetailCommentsTableViewCell.swift */,
+			);
+			path = PostDetalCells;
 			sourceTree = "<group>";
 		};
 		569A41F821611B130014E43C /* ApplicationNavigator */ = {
@@ -321,8 +390,8 @@
 		569A41FD21611D130014E43C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				56766AAB21625750005CE700 /* 3dParty */,
 				569A41FE21611D2D0014E43C /* UIStoryboard+Common.swift */,
-				569A420221614CDF0014E43C /* ActivityIndicator.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -393,8 +462,8 @@
 			buildPhases = (
 				DC0635D5F76DC0B565D61086 /* [CP] Check Pods Manifest.lock */,
 				5615D26C215AA509001EAB89 /* Sources */,
-				5615D26D215AA509001EAB89 /* Frameworks */,
 				5615D287215AC513001EAB89 /* ShellScript */,
+				5615D26D215AA509001EAB89 /* Frameworks */,
 				5615D26E215AA509001EAB89 /* Resources */,
 				2924E40EA121C1BE05223136 /* [CP] Embed Pods Frameworks */,
 			);
@@ -454,6 +523,7 @@
 				5615D26A215AA509001EAB89 /* LaunchScreen.storyboard in Resources */,
 				5615D267215AA509001EAB89 /* Assets.xcassets in Resources */,
 				5615D265215AA507001EAB89 /* Main.storyboard in Resources */,
+				563819C621616ADA007F7279 /* MockedPostsResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,21 +573,25 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-The-Posts/Pods-The-Posts-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,7 +610,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Define output file. Change \"$PROJECT_DIR/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"$PROJECT_DIR/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = $OUTPUT_FILE\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = $INPUT_DIR\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"$INPUT_DIR/API/JustTestProtocol.swift\"\n#\"$INPUT_DIR/Classes/API/ApiClient.swift\" \\\n";
+			shellScript = "# Define output file. Change \"$PROJECT_DIR/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"$PROJECT_DIR/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = $OUTPUT_FILE\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = $INPUT_DIR\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"$INPUT_DIR/Application/ApplicationAssembly.swift\" \\\n\"$INPUT_DIR/Domain/API/ApiClient.swift\" \\\n\n# ... a/Users/poullafitskiy/Documents/Babylone - 1/The-Posts/The-Posts/Domain/API/ApiClient.swiftnd so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
 		};
 		7418ABA8EECFA5686A78F9A6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -585,6 +659,7 @@
 				569A41FC21611B4E0014E43C /* ApplicationNavigatorImpl.swift in Sources */,
 				5615D297215B704B001EAB89 /* ApiClientImpl.swift in Sources */,
 				5650C0BD215D41A700951FA3 /* PostRepo.swift in Sources */,
+				5691D45821620CBD002750CD /* AuthorPostDetailTalbeViewCell.swift in Sources */,
 				5650C0C5215D41CD00951FA3 /* UserRepoImpl.swift in Sources */,
 				5656BB562160F9F900B535A7 /* DatabaseMigrationManager.swift in Sources */,
 				5650C0BF215D41AD00951FA3 /* UserRepo.swift in Sources */,
@@ -596,8 +671,10 @@
 				5650C0C3215D41C400951FA3 /* PostRepoImpl.swift in Sources */,
 				56EFF853215FADB9002B3146 /* EntitiesDatabaseManager.swift in Sources */,
 				5650C0C1215D41B600951FA3 /* CommentsRepoImpl.swift in Sources */,
+				5691D45C21620CE8002750CD /* PostDetailCommentsTableViewCell.swift in Sources */,
 				5656BB582160FA0900B535A7 /* DatabaseMigrationManagerImpl.swift in Sources */,
 				5615D291215ACCCF001EAB89 /* CommentEntity.swift in Sources */,
+				5691D45521620C51002750CD /* PostDetailViewModel.swift in Sources */,
 				5615D262215AA507001EAB89 /* ViewController.swift in Sources */,
 				5656BB5A2161021700B535A7 /* ApplicationAssemblyImpl.swift in Sources */,
 				5615D295215B703E001EAB89 /* ApiClient.swift in Sources */,
@@ -606,6 +683,8 @@
 				5615D28F215ACC1B001EAB89 /* UserEntity.swift in Sources */,
 				56EFF84C215F97F8002B3146 /* DomainError.swift in Sources */,
 				5656BB6521610CFA00B535A7 /* FeedPostTableViewCell.swift in Sources */,
+				5691D45A21620CDA002750CD /* PostDetailDescriptionTableViewCell.swift in Sources */,
+				5691D45321620C46002750CD /* PostDetailViewController.swift in Sources */,
 				5615D260215AA507001EAB89 /* AppDelegate.swift in Sources */,
 				569A41FF21611D2D0014E43C /* UIStoryboard+Common.swift in Sources */,
 				56EFF856215FD635002B3146 /* EntitiesDatabaseManagerImpl.swift in Sources */,
@@ -620,8 +699,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				563819C12161662C007F7279 /* GeneratedMocks.swift in Sources */,
 				5615D275215AA509001EAB89 /* The_PostsTests.swift in Sources */,
-				5615D289215AC5DF001EAB89 /* GeneratedMocks.swift in Sources */,
+				563819C021616420007F7279 /* PostRepoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,11 +13,11 @@ import RealmSwift
 
 class CommentEntity: Object, Codable {
   
-  var postId: Int = 0
-  var id: Int = 0
-  var name: String = ""
-  var email: String = ""
-  var body: String = ""
+  dynamic var postId: Int = 0
+  dynamic var id: Int = 0
+  dynamic var name: String = ""
+  dynamic var email: String = ""
+  dynamic var body: String = ""
 
   enum CommentCodingKeys: String, CodingKey {
     case postId

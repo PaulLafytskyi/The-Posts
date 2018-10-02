@@ -4,6 +4,7 @@ target 'The-Posts' do
   use_frameworks!
   pod 'RealmSwift', '~> 3.10.0'
   pod 'RxSwift', '~> 4.3.1'
+  pod 'RxDataSources', '~> 3.0'
   pod 'RxCocoa', '~> 4.3.1'
   pod 'Alamofire', '~> 4.7.3'
   pod 'RxAlamofire', '~> 4.3.0'
