@@ -53,9 +53,15 @@ class FeedPostsViewController: UIViewController {
       .drive(refreshControl.rx.isRefreshing)
       .disposed(by: disposeBag)
 
+
     output
       .navigate
       .drive()
       .disposed(by: disposeBag)
+
+    output
+    .error
+    .drive(self.rx.showAllert)
+    .disposed(by: disposeBag)
   }
 }

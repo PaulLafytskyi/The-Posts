@@ -20,11 +20,12 @@ final class FeedPostsViewModel {
     let posts: Driver<[PostEntity]>
     let fetching: Driver<Bool>
     let navigate: Driver<PostEntity>
+    let error: Driver<Error>
   }
 
   private let postRepo: PostRepo
   private let navigator: ApplicationNavigator
-
+  private let errorSubject = PublishSubject<Error>()
 
   init(postRepo: PostRepo, navigator: ApplicationNavigator) {
     self.postRepo = postRepo
@@ -41,7 +42,9 @@ final class FeedPostsViewModel {
 
     let posts = triger.flatMapLatest { _ in
       return self.postRepo.syncPosts()
-      .catchError{ error in return Observable.just(()) }
+      .catchError{ error in
+        self.errorSubject.onNext(error)
+        return Observable.just(()) }
       .trackActivity(activityIndicator)
       }
       .flatMap {_ in
@@ -61,7 +64,8 @@ final class FeedPostsViewModel {
     return Output(
       posts: posts,
       fetching: activityIndicator.asDriver(),
-      navigate:navigationToPost
+      navigate:navigationToPost,
+      error: errorSubject.asObserver().asDriverOnErrorJustComplete()
     )
   }
 }
